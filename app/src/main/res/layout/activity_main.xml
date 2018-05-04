@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.av.mojaztask.ui.MainActivity"
+    android:orientation="vertical"
+    android:paddingBottom="15dp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_top"
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+ >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/toolbar_title"
+            android:textColor="@color/white"
+            android:text="@string/title_before_filter"
+            />
+
+
+    </android.support.v7.widget.Toolbar>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_viw"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Hello World!"
+        tools:listitem="@layout/row_items_list"
+        android:layout_marginBottom="70dp"
+        />
+    </LinearLayout>
+<Button
+    android:id="@+id/filter_btn"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:text="@string/btn_filter_done"
+    android:layout_gravity="bottom|center_horizontal"
+    android:background="@drawable/btn_rounded_corners"
+    android:textColor="#fff"
+    android:textSize="13sp"
+    android:layout_marginStart="70dp"
+    android:layout_marginEnd="70dp"
+    android:textAllCaps="false"
+    android:layout_marginBottom="15dp"
+    />
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="invisible"/>
+</FrameLayout>

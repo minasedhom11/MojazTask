@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">MojazTask</string>
+    <string name="title_before_filter">Check To Filter This List</string>
+    <string name="title_after_filter">Filtered</string>
+    <string name="btn_filter_done">Filter Done</string>
+</resources>
