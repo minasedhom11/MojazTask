@@ -1,6 +1,7 @@
-package com.av.mojaztask.ui;
+package com.av.mojaztask.ui.itemList;
 
-import com.av.mojaztask.Item;
+import android.support.annotation.NonNull;
+
 import com.av.mojaztask.networkUtilities.ApiClient;
 import com.av.mojaztask.networkUtilities.ApiInterface;
 import com.av.mojaztask.networkUtilities.GetCallback;
@@ -11,23 +12,18 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-/**
- * Created by Mina on 5/4/2018.
- */
+public class MainModelImp implements MainContract.MainModel {
 
-public class Model {
+    private final ApiInterface apiInterface= ApiClient.getClient().create(ApiInterface.class);
 
-    private static ApiInterface apiInterface= ApiClient.getClient().create(ApiInterface.class);
-
-    public static void getItemsList(final GetCallback.onDataFetched listener){
-        //showProgress();
+    @Override
+    public void requestItemsListApi(final GetCallback.onDataFetched listener){
         Call<ArrayList<Item>> call=apiInterface.getItemsListApi();
         call.enqueue(new Callback<ArrayList<Item>>() {
             @Override
-            public void onResponse(Call<ArrayList<Item>> call, Response<ArrayList<Item>> response) {
+            public void onResponse(@NonNull Call<ArrayList<Item>> call, @NonNull Response<ArrayList<Item>> response) {
                 if(response.isSuccessful()){
                     if(response.body()!=null){
-                       // items=response.body();
                         listener.onSuccess(response.body());
                     }
                 }
@@ -35,7 +31,7 @@ public class Model {
             }
 
             @Override
-            public void onFailure(Call<ArrayList<Item>> call, Throwable t) {
+            public void onFailure(@NonNull Call<ArrayList<Item>> call, @NonNull Throwable t) {
                 listener.onFailure(t.getMessage());
             }
         });

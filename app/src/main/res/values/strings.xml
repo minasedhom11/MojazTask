@@ -3,4 +3,10 @@
     <string name="title_before_filter">Check To Filter This List</string>
     <string name="title_after_filter">Filtered</string>
     <string name="btn_filter_done">Filter Done</string>
+    <string name="connection_error">Internet connection lost!</string>
+    <string name="no_item_selected">Please select at least one item to proceed!"</string>
+    <string name="ten_items_selected">You have selected the maximum number of items.""</string>
+    <string name="type_title_here">Type Title Here</string>
+    <string name="album_id">Album ID: </string>
+
 </resources>

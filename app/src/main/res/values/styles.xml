@@ -10,19 +10,5 @@
         <item name="windowNoTitle">true</item>
     </style>
     <!-- style for the action bar backgrounds -->
-    <style name="MyActionBar" parent="@style/Widget.AppCompat.Light.ActionBar">
-        <item name="android:background">@color/colorPrimary</item>
-        <item name="background">@color/colorPrimary</item>
-        <item name="android:titleTextStyle">@style/MyTheme.ActionBar.TitleTextStyle</item>
-        <item name="android:subtitleTextStyle">@style/MyTheme.ActionBar.TitleTextStyle</item>
-        <item name="titleTextStyle">@style/MyTheme.ActionBar.TitleTextStyle</item>
-        <item name="subtitleTextStyle">@style/MyTheme.ActionBar.TitleTextStyle</item>
-    </style>
-    <style name="MyTheme.ActionBar.TitleTextStyle" parent="@android:style/TextAppearance">
-        <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">15sp</item>
 
-        <item name="android:layout_gravity">center_horizontal</item>
-
-    </style>
 </resources>

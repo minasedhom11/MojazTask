@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.av.mojaztask.ui.MainActivity"
-    android:orientation="vertical"
-    android:paddingBottom="15dp"
-    >
+<layout>
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.av.mojaztask.ui.itemList.MainActivity"
+        android:orientation="vertical"
+        android:paddingBottom="10dp">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,10 +17,19 @@
         android:layout_height="50dp"
         android:layout_width="match_parent"
         android:minHeight="?attr/actionBarSize"
-        android:background="@color/colorPrimary"
- >
-
-
+        android:background="@color/colorPrimary">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <Button
+            android:layout_width="20dp"
+            android:layout_height="25dp"
+            android:background="@mipmap/ic_back"
+            android:padding="5dp"
+            android:id="@+id/back_btn"
+            android:visibility="gone"
+            android:layout_gravity="center_vertical"
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -29,17 +37,31 @@
             android:id="@+id/toolbar_title"
             android:textColor="@color/white"
             android:text="@string/title_before_filter"
+            android:textSize="16sp"
+            android:layout_marginRight="5dp"
             />
-
-
+        <ImageView
+            android:id="@+id/reload_btn"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@mipmap/ic_reload"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginRight="25dp"
+            android:visibility="visible"
+            tools:ignore="ContentDescription" />
+        </FrameLayout>
     </android.support.v7.widget.Toolbar>
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_viw"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="Hello World!"
         tools:listitem="@layout/row_items_list"
-        android:layout_marginBottom="70dp"
+        android:layout_marginBottom="50dp"
+        android:scrollbars="vertical"
+        android:fadeScrollbars="true"
+        android:isScrollContainer="true"
         />
     </LinearLayout>
 <Button
@@ -54,12 +76,16 @@
     android:layout_marginStart="70dp"
     android:layout_marginEnd="70dp"
     android:textAllCaps="false"
-    android:layout_marginBottom="15dp"
+    android:layout_marginBottom="10dp"
+    android:visibility="invisible"
     />
+
     <ProgressBar
         android:id="@+id/progress_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:visibility="invisible"/>
+        android:visibility="invisible"
+        />
 </FrameLayout>
+</layout>

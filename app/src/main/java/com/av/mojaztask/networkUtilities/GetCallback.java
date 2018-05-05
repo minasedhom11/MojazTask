@@ -1,14 +1,9 @@
 package com.av.mojaztask.networkUtilities;
 
-import android.os.Bundle;
-
-import com.av.mojaztask.Item;
+import com.av.mojaztask.ui.itemList.Item;
 
 import java.util.ArrayList;
 
-/**
- * Created by Mina on 5/3/2018.
- */
 
 public abstract class GetCallback {
 

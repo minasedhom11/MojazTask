@@ -1,39 +1,35 @@
-package com.av.mojaztask;
-
-/**
- * Created by Mina on 5/3/2018.
- */
+package com.av.mojaztask.ui.itemList;
 
 public class Item {
 
    private int id,albumId;
    private String title,url,thumbnailUrl;
    private boolean isSelected;
-    public int getId() {
+   public int getId() {
         return id;
     }
 
-    public int getAlbumId() {
+    int getAlbumId() {
         return albumId;
     }
 
-    public String getTitle() {
+    String getTitle() {
         return title;
     }
 
-    public String getUrl() {
+    String getUrl() {
         return url;
     }
 
-    public String getThumbnailUrl() {
+    String getThumbnailUrl() {
         return thumbnailUrl;
     }
 
-    public boolean isSelected() {
+    boolean isSelected() {
         return isSelected;
     }
 
-    public void setSelected(boolean selected) {
+    void setSelected(boolean selected) {
         isSelected = selected;
     }
 }
