@@ -18,18 +18,17 @@ public class MainActivity extends AppCompatActivity implements MainContract.Main
     private ItemsListAdapter adapter;
     private MainPresenterImp mainPresenter;
     private ActivityMainBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-
         setSupportActionBar(binding.toolbarTop);
         if(getSupportActionBar()!=null)
             getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         mainPresenter=new MainPresenterImp(this);
         mainPresenter.onAttach();
-
         binding.filterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,7 +49,6 @@ public class MainActivity extends AppCompatActivity implements MainContract.Main
                 mainPresenter.onReloadClicked();
             }
         });
-
     }
 
     @Override

@@ -60,7 +60,7 @@ public class ItemsListAdapter  extends RecyclerView.Adapter<ItemsListAdapter.Vie
                         .fitCenter().transform(new CircleCrop()))
                 .load(item.getUrl())
                 .into(holder.photo);
-
+        
         holder.checkBox.setOnCheckedChangeListener(null);
         holder.checkBox.setChecked(items.get(position).isSelected());
         holder.checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -71,23 +71,16 @@ public class ItemsListAdapter  extends RecyclerView.Adapter<ItemsListAdapter.Vie
                             items.get(position).setSelected(true);
                         }
                         else{
-                                Toast.makeText(context, context.getResources().getString(R.string.ten_items_selected), Toast.LENGTH_SHORT).show();
-                                items.get(position).setSelected(false);
-                                compoundButton.setChecked(items.get(position).isSelected());
+                              Toast.makeText(context, context.getResources().getString(R.string.ten_items_selected), Toast.LENGTH_SHORT).show();
+                              items.get(position).setSelected(false);
+                              compoundButton.setChecked(items.get(position).isSelected());
                         }
                     }
                     else{
-                            items.get(position).setSelected(false);
+                        items.get(position).setSelected(false);
                     }
             }
 
-        });
-
-        holder.title.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(context, String.valueOf(item.isSelected() + " "+position), Toast.LENGTH_SHORT).show();
-            }
         });
     }
 
